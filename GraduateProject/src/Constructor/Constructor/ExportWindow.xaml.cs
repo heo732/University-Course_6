@@ -10,30 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Constructor
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ExportWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ExportWindow : Window
     {
-        public MainWindow()
+        public ExportWindow()
         {
             InitializeComponent();
-        }
-
-        private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            if ((Keyboard.Modifiers & ModifierKeys.Control) != ModifierKeys.Control)
-                return;
-
-            if (Keyboard.IsKeyDown(Key.E))
-            {
-                new ExportWindow().Show();
-            }
         }
     }
 }
