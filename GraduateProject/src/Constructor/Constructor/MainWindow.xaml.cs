@@ -30,9 +30,14 @@ namespace Constructor
             if ((Keyboard.Modifiers & ModifierKeys.Control) != ModifierKeys.Control)
                 return;
 
-            if (Keyboard.IsKeyDown(Key.E))
+            switch (e.Key)
             {
-                new ExportWindow().Show();
+                case Key.E:
+                    new ExportWindow().Show();
+                    break;
+                case Key.G:
+                    new GeneralWindow().Show();
+                    break;
             }
         }
     }
